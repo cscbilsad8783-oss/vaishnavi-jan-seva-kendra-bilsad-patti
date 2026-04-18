@@ -6,84 +6,23 @@
 <title>Vaishnavi Janseva Kendra</title>
 
 <style>
-body {
-    margin:0;
-    font-family: Arial;
-    background:#f2f2f2;
-}
-
-/* TOP LINE */
-.top {
-    background:#ff6600;
-    color:white;
-    text-align:center;
-    padding:10px;
-    font-weight:bold;
-}
-
-/* HEADER */
-header {
-    background:#007bff;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-/* NAV */
-nav {
-    background:#333;
-    text-align:center;
-    padding:10px;
-}
-
-nav a {
-    color:white;
-    margin:10px;
-    text-decoration:none;
-}
-
-/* BOX */
-.container {
-    padding:20px;
-}
-
-.card {
-    background:white;
-    padding:15px;
-    margin:15px 0;
-    border-radius:10px;
-}
-
-/* FORM */
-input, textarea {
-    width:100%;
-    padding:10px;
-    margin:8px 0;
-}
-
-button {
-    background:green;
-    color:white;
-    padding:10px;
-    border:none;
-    border-radius:5px;
-}
-
-/* FOOTER */
-footer {
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:10px;
-}
+body {margin:0;font-family:Arial;background:#f2f2f2;}
+.top {background:#ff6600;color:white;text-align:center;padding:10px;font-weight:bold;}
+header {background:#007bff;color:white;text-align:center;padding:20px;}
+nav {background:#333;text-align:center;padding:10px;}
+nav a {color:white;margin:10px;text-decoration:none;}
+.container {padding:20px;}
+.card {background:white;padding:15px;margin:15px 0;border-radius:10px;}
+input, textarea {width:100%;padding:10px;margin:8px 0;}
+button {background:green;color:white;padding:10px;border:none;border-radius:5px;}
+footer {background:#222;color:white;text-align:center;padding:10px;}
+.success {color:green;font-weight:bold;margin-top:10px;}
 </style>
 </head>
 
 <body>
 
-<div class="top">
-🙏 Jai Shree Shyam 🙏
-</div>
+<div class="top">🙏 Jai Shree Shyam 🙏</div>
 
 <header>
 <h1>Vaishnavi Janseva Kendra</h1>
@@ -119,7 +58,7 @@ footer {
 <div class="card" id="form">
 <h2>Apply Form</h2>
 
-<form onsubmit="sendWhatsApp(); return false;">
+<form onsubmit="sendWhatsApp(event)">
 <input type="text" id="name" placeholder="Your Name" required>
 <input type="text" id="mobile" placeholder="Mobile Number" required>
 <textarea id="service" placeholder="Kaunsi Service chahiye"></textarea>
@@ -127,6 +66,41 @@ footer {
 <button type="submit">Submit</button>
 </form>
 
+<p id="successMsg" class="success"></p>
+
 </div>
 
-<div class="card" id
+<div class="card" id="contact">
+<h2>Contact</h2>
+<p>Mobile: 7902148783</p>
+<a href="https://wa.me/917902148783">👉 WhatsApp Chat</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 Vaishnavi Janseva Kendra
+</footer>
+
+<script>
+function sendWhatsApp(e){
+e.preventDefault();
+
+var name=document.getElementById("name").value;
+var mobile=document.getElementById("mobile").value;
+var service=document.getElementById("service").value;
+
+var message = Name: ${name}\nMobile: ${mobile}\nService: ${service};
+
+var url = "https://wa.me/917902148783?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+// success message
+document.getElementById("successMsg").innerText="Form submitted! WhatsApp open ho gaya hai.";
+
+}
+</script>
+
+</body>
+</html>
