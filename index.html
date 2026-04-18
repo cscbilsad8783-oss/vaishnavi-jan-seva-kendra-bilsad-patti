@@ -1,23 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vaishnavi Janseva Kendra</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Shyam Janseva Kendra</title>
+
+<style>
+body {margin:0;font-family:Arial;background:#f2f2f2;}
+
+.topbar {
+background:#000;
+color:white;
+text-align:center;
+padding:8px;
+}
+
+header {
+background:#007bff;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav {
+background:#333;
+text-align:center;
+padding:10px;
+}
+
+nav a {
+color:white;
+margin:10px;
+text-decoration:none;
+}
+
+.container {
+padding:20px;
+}
+
+.card {
+background:white;
+padding:15px;
+margin:15px 0;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+width:100%;
+padding:10px;
+margin:8px 0;
+}
+
+button {
+background:green;
+color:white;
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+footer {
+background:#222;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Vaishnavi Janseva Kendra</h1>
-    <p>Yahan sabhi sarkari seva uplabdh hain.</p>
+<div class="topbar">
+📞 7902148783 | WhatsApp Available
+</div>
 
-    <h2>Services</h2>
-    <ul>
-        <li>Aadhar Card</li>
-        <li>Pan Card</li>
-        <li>Ayushman Card</li>
-        <li>Online Form Fill</li>
-    </ul>
+<header>
+<h1>Shree Shyam Janseva Kendra</h1>
+<p>Vill Bilsar Patti, Aliganj, Etah, Uttar Pradesh</p>
+</header>
 
-    <h2>Contact</h2>
-    <p>Mobile: 9876543210</p>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#form">Apply</a>
+<a href="#contact">Contact</a>
+</nav>
 
-</body>
-</html>
+<div class="container">
+
+<div class="card" id="home">
+<h2>Welcome</h2>
+<p>Yahan sabhi sarkari seva uplabdh hain.</p>
+</div>
+
+<div class="card" id="services">
+<h2>Services</h2>
+<ul>
+<li>Aadhar Card</li>
+<li>Pan Card</li>
+<li>Ayushman Card</li>
+<li>Online Form Filling</li>
+<li>Income / Caste Certificate</li>
+</ul>
+</div>
+
+<div class="card" id="form">
+<h2>Apply Form</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text
