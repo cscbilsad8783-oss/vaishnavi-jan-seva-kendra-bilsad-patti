@@ -1,83 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Shyam Janseva Kendra</title>
+<title>Vaishnavi Janseva Kendra</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#f2f2f2;}
-
-.topbar {
-background:#000;
-color:white;
-text-align:center;
-padding:8px;
+body {
+    margin:0;
+    font-family: Arial;
+    background:#f2f2f2;
 }
 
+/* TOP LINE */
+.top {
+    background:#ff6600;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+}
+
+/* HEADER */
 header {
-background:#007bff;
-color:white;
-text-align:center;
-padding:20px;
+    background:#007bff;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
+/* NAV */
 nav {
-background:#333;
-text-align:center;
-padding:10px;
+    background:#333;
+    text-align:center;
+    padding:10px;
 }
 
 nav a {
-color:white;
-margin:10px;
-text-decoration:none;
+    color:white;
+    margin:10px;
+    text-decoration:none;
 }
 
+/* BOX */
 .container {
-padding:20px;
+    padding:20px;
 }
 
 .card {
-background:white;
-padding:15px;
-margin:15px 0;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+    background:white;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
 }
 
+/* FORM */
 input, textarea {
-width:100%;
-padding:10px;
-margin:8px 0;
+    width:100%;
+    padding:10px;
+    margin:8px 0;
 }
 
 button {
-background:green;
-color:white;
-padding:10px;
-border:none;
-border-radius:5px;
+    background:green;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:5px;
 }
 
+/* FOOTER */
 footer {
-background:#222;
-color:white;
-text-align:center;
-padding:10px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-📞 7902148783 | WhatsApp Available
+<div class="top">
+🙏 Jai Shree Shyam 🙏
 </div>
 
 <header>
-<h1>Shree Shyam Janseva Kendra</h1>
-<p>Vill Bilsar Patti, Aliganj, Etah, Uttar Pradesh</p>
+<h1>Vaishnavi Janseva Kendra</h1>
+<p>Owner: Ankit Kumar</p>
+<p>Mobile: 7902148783</p>
 </header>
 
 <nav>
@@ -109,4 +120,13 @@ padding:10px;
 <h2>Apply Form</h2>
 
 <form onsubmit="sendWhatsApp(); return false;">
-<input type="text
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="mobile" placeholder="Mobile Number" required>
+<textarea id="service" placeholder="Kaunsi Service chahiye"></textarea>
+
+<button type="submit">Submit</button>
+</form>
+
+</div>
+
+<div class="card" id
